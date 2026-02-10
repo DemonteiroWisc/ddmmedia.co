@@ -1,4 +1,4 @@
-  <!DOCTYPE html>                                                                                                                                                                                                             <html lang="en">                                                                                                                                                                                                          
+<!DOCTYPE html>                                                                                                                                                                                                             <html lang="en">
   <head>                                                                                                                                                                                                                    
       <meta charset="UTF-8">                                                                                                                                                                                                
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
               line-height: 1.6;
               color: #333;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              background-color: #1A3651;
               min-height: 100vh;
           }
 
@@ -28,40 +28,48 @@
           header {
               text-align: center;
               padding: 60px 20px;
-              color: white;
+              color: #FFFFFF;
           }
 
           h1 {
               font-size: 3.5em;
               margin-bottom: 15px;
               font-weight: 700;
+              letter-spacing: -1px;
           }
 
           .tagline {
               font-size: 1.3em;
-              opacity: 0.95;
+              color: #FFFFFF;
+              opacity: 0.9;
               font-weight: 300;
           }
 
           .content-card {
-              background: white;
+              background: #FFFFFF;
               border-radius: 12px;
               padding: 50px;
               margin: 30px 0;
-              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
           }
 
           h2 {
-              color: #667eea;
+              color: #1A3651;
               font-size: 2em;
               margin-bottom: 20px;
+              font-weight: 600;
           }
 
           h3 {
-              color: #333;
+              color: #1A3651;
               font-size: 1.5em;
               margin-top: 30px;
               margin-bottom: 10px;
+              font-weight: 600;
+          }
+
+          p {
+              color: #708090;
           }
 
           .products {
@@ -72,53 +80,66 @@
           }
 
           .product-card {
-              border: 2px solid #667eea;
+              border: 2px solid #007BFF;
               border-radius: 8px;
               padding: 30px;
               transition: transform 0.2s, box-shadow 0.2s;
+              background: #FFFFFF;
           }
 
           .product-card:hover {
               transform: translateY(-5px);
-              box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+              box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+          }
+
+          .product-card.coming-soon {
+              border-color: #708090;
+              opacity: 0.7;
           }
 
           .product-title {
-              color: #667eea;
+              color: #1A3651;
               font-size: 1.8em;
               margin-bottom: 10px;
+              font-weight: 600;
           }
 
           .product-description {
-              color: #666;
+              color: #708090;
               margin-bottom: 15px;
           }
 
           .badge {
               display: inline-block;
-              background: #667eea;
-              color: white;
+              background: #007BFF;
+              color: #FFFFFF;
               padding: 5px 12px;
               border-radius: 20px;
               font-size: 0.85em;
               margin-right: 8px;
+              font-weight: 500;
+          }
+
+          .badge.secondary {
+              background: #708090;
           }
 
           footer {
               text-align: center;
               padding: 40px 20px;
-              color: white;
+              color: #FFFFFF;
           }
 
           footer a {
-              color: white;
+              color: #FFFFFF;
               text-decoration: none;
-              border-bottom: 1px solid white;
+              border-bottom: 1px solid #FFFFFF;
               padding-bottom: 2px;
+              transition: opacity 0.2s;
           }
 
           footer a:hover {
-              opacity: 0.8;
+              opacity: 0.7;
           }
 
           .links {
@@ -127,6 +148,30 @@
 
           .links a {
               margin: 0 15px;
+          }
+
+          /* Accent section with navy background */
+          .accent-card {
+              background: #1A3651;
+              color: #FFFFFF;
+              border-radius: 12px;
+              padding: 50px;
+              margin: 30px 0;
+              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+          }
+
+          .accent-card h2 {
+              color: #FFFFFF;
+          }
+
+          .accent-card p {
+              color: #FFFFFF;
+              opacity: 0.9;
+          }
+
+          .accent-card h3 {
+              color: #007BFF;
+              margin-top: 30px;
           }
 
           @media (max-width: 768px) {
@@ -138,7 +183,8 @@
                   font-size: 1.1em;
               }
 
-              .content-card {
+              .content-card,
+              .accent-card {
                   padding: 30px 25px;
               }
 
@@ -169,17 +215,17 @@
                       <span class="badge">Notifications</span>
                   </div>
 
-                  <div class="product-card" style="border-color: #ddd; opacity: 0.7;">
-                      <div class="product-title" style="color: #999;">More Coming Soon</div>
+                  <div class="product-card coming-soon">
+                      <div class="product-title">More Coming Soon</div>
                       <p class="product-description">
                           We're constantly innovating and building new products. Stay tuned for upcoming releases.
                       </p>
-                      <span class="badge" style="background: #999;">In Development</span>
+                      <span class="badge secondary">In Development</span>
                   </div>
               </div>
           </div>
 
-          <div class="content-card">
+          <div class="accent-card">
               <h2>About DDM Media Group</h2>
               <p>
                   DDM Media Group is a media venture company focused on creating digital products that solve real problems
@@ -202,7 +248,7 @@
           </div>
 
           <footer>
-              <p>&copy; 2026 DDM Media Group. All rights reserved.</p>
+              <p>&copy; 2025 DDM Media Group. All rights reserved.</p>
               <div class="links">
                   <a href="/tactus/privacy.html">Privacy Policy</a>
               </div>
