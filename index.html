@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DDM Media Group - A modern media and technology holding company specializing in digital attention, algorithmic growth, and proprietary content automation.">
+    
+    <!-- PRIMARY SEO -->
+    <title>DDM Media Group | Media & Technology Holdings</title>
+    <meta name="description" content="DDM Media Group is a media and technology holding company specializing in digital attention, algorithmic growth, and proprietary content automation.">
+    <meta name="keywords" content="DDM Media Group, Media Venture, Digital Assets, Content Automation, Tactus App, Daniel DeMonteiro">
+    <meta name="author" content="DDM Media Group">
+    <link rel="canonical" href="https://ddmmedia.co/">
+
+    <!-- OPEN GRAPH / LINKEDIN -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ddmmedia.co/">
+    <meta property="og:title" content="DDM Media Group | Media & Technology Holdings">
+    <meta property="og:description" content="Scaling digital attention through data, creativity, and automation.">
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D560BAQGVJDDzfZOUDg/company-logo_200_200/B56ZtNZtYLIAAI-/0/1766530144440/ddm_media_group_logo?e=1772064000&v=beta&t=8-UsAoVpC-SmBmCYvz2F3hOdfc7L1Sx3Ve8oIsv1P8Y">
+
+    <!-- STRUCTURED DATA (Schema.org for Corporate Identity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DDM Media Group",
+      "url": "https://ddmmedia.co",
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQGVJDDzfZOUDg/company-logo_200_200/B56ZtNZtYLIAAI-/0/1766530144440/ddm_media_group_logo?e=1772064000&v=beta&t=8-UsAoVpC-SmBmCYvz2F3hOdfc7L1Sx3Ve8oIsv1P8Y",
+      "sameAs": [
+        "https://www.linkedin.com/company/ddm-media-group/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "daniel@ddmmediagroup.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>DDM Media Group | Digital Assets & Technology</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-dark: #0B1120;
@@ -16,7 +49,6 @@
             --accent-blue: #38BDF8;
             --accent-indigo: #818CF8;
             --border-color: rgba(255, 255, 255, 0.08);
-            --gradient-surface: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
         }
 
         * {
@@ -31,9 +63,9 @@
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden; /* Prevents scrollbar jump during animation */
         }
 
-        /* Layout Utilities */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -45,7 +77,7 @@
             gap: 24px;
         }
 
-        /* Header */
+        /* --- HEADER --- */
         header {
             padding: 24px 0 16px;
             display: flex;
@@ -70,7 +102,7 @@
             border-radius: 8px;
         }
 
-        /* Hero Section */
+        /* --- HERO --- */
         .hero {
             padding: 40px 0 60px;
             max-width: 800px;
@@ -102,7 +134,7 @@
             max-width: 600px;
         }
 
-        /* Metrics Bar */
+        /* --- METRICS --- */
         .metrics-bar {
             display: flex;
             flex-wrap: wrap;
@@ -126,7 +158,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* Bento Grid Layout */
+        /* --- BENTO GRID --- */
         .bento-grid {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             margin-bottom: 80px;
@@ -191,33 +223,7 @@
             font-weight: 600;
         }
 
-        /* Partners Section */
-        .partners {
-            margin-bottom: 80px;
-        }
-        
-        .partners h4 {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
-        }
-
-        .partner-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px 40px;
-            opacity: 0.7;
-        }
-
-        .partner-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        /* Product Highlight (Tactus) */
+        /* --- TACTUS VENTURE CARD --- */
         .venture-card {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 1px solid var(--accent-indigo);
@@ -270,7 +276,33 @@
             opacity: 0.9;
         }
 
-        /* Footer */
+        /* --- PARTNERS --- */
+        .partners {
+            margin-bottom: 80px;
+        }
+        
+        .partners h4 {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+
+        .partner-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 40px;
+            opacity: 0.7;
+        }
+
+        .partner-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* --- FOOTER --- */
         footer {
             border-top: 1px solid var(--border-color);
             padding: 40px 0;
@@ -292,6 +324,32 @@
             color: var(--text-main);
         }
 
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+            filter: blur(4px);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        @media (prefers-reduced-motion) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                filter: none;
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -307,13 +365,13 @@
             </div>
         </header>
 
-        <section class="hero">
+        <section class="hero reveal">
             <span class="label">Media & Technology Holdings</span>
             <h1>Scaling digital attention through data, creativity, and automation.</h1>
             <p>We build high-growth media networks, engineer content automation systems, and develop consumer-facing digital products.</p>
         </section>
 
-        <section class="metrics-bar">
+        <section class="metrics-bar reveal delay-100">
             <div class="metric">
                 <h3>350M+</h3>
                 <span>Total Views</span>
@@ -334,7 +392,7 @@
 
         <div class="grid bento-grid">
             <!-- Media Network Card -->
-            <div class="card">
+            <div class="card reveal delay-100">
                 <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                 <h2>Media Network</h2>
                 <p>Identifying arbitrage opportunities in short-form content to drive long-tail assets and artist discovery.</p>
@@ -346,7 +404,7 @@
             </div>
 
             <!-- Tech & Automation Card -->
-            <div class="card">
+            <div class="card reveal delay-200">
                 <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                 <h2>Automation Infrastructure</h2>
                 <p>Leveraging LLMs and proprietary Python pipelines to automate content generation and localization.</p>
@@ -358,7 +416,7 @@
             </div>
 
             <!-- Commerce Card -->
-            <div class="card">
+            <div class="card reveal delay-300">
                 <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                 <h2>D2C & Commerce</h2>
                 <p>Performance marketing and creative production for direct-to-consumer brands and affiliate networks.</p>
@@ -370,7 +428,7 @@
             </div>
 
             <!-- Ventures Card (Tactus) -->
-            <div class="card venture-card">
+            <div class="card venture-card reveal delay-200">
                 <div class="venture-content">
                     <div class="venture-status">Current Venture</div>
                     <h3>Tactus</h3>
@@ -380,16 +438,16 @@
                     <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
                         <span class="tag" style="background: rgba(255,255,255,0.1); color: white;">SwiftUI</span>
                         <span class="tag" style="background: rgba(255,255,255,0.1); color: white;">Live Activities</span>
+                        <span class="tag" style="background: rgba(255,255,255,0.1); color: white;">HealthKit</span>
                     </div>
                 </div>
                 <div>
-                    <!-- Link strictly for functionality/verification -->
                      <a href="#" class="btn" style="background: white; color: #0f172a; cursor: default;">Internal Beta</a>
                 </div>
             </div>
         </div>
 
-        <section class="partners">
+        <section class="partners reveal">
             <h4>Strategic Partnerships & Clients</h4>
             <div class="partner-list">
                 <span class="partner-name">Sony Music</span>
@@ -408,5 +466,27 @@
             <p>&copy; 2026 DDM Media Group. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
