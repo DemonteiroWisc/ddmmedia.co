@@ -1,258 +1,257 @@
-<!DOCTYPE html>                                                                                                                                                                                                             <html lang="en">
-  <head>                                                                                                                                                                                                                    
-      <meta charset="UTF-8">                                                                                                                                                                                                
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="DDM Media Group - Building innovative digital products and experiences">
-      <title>DDM Media Group</title>
-      <style>
-          * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-          }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DDM Media Group - Building innovative digital products and experiences">
+    <title>DDM Media Group</title>
+    <style>
+        :root {
+            --primary-navy: #1A3651;
+            --accent-blue: #007BFF;
+            --text-main: #2D3748;
+            --text-light: #718096;
+            --glass-bg: rgba(255, 255, 255, 0.98);
+        }
 
-          body {
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-              line-height: 1.6;
-              color: #333;
-              background-color: #1A3651;
-              min-height: 100vh;
-          }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-          .container {
-              max-width: 1000px;
-              margin: 0 auto;
-              padding: 40px 20px;
-          }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: var(--text-main);
+            background-color: var(--primary-navy);
+            background: radial-gradient(circle at top right, #254b70, #1A3651);
+            min-height: 100vh;
+        }
 
-          header {
-              text-align: center;
-              padding: 60px 20px;
-              color: #FFFFFF;
-          }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-          h1 {
-              font-size: 3.5em;
-              margin-bottom: 15px;
-              font-weight: 700;
-              letter-spacing: -1px;
-          }
+        /* Adjusted Header Spacing */
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            color: #FFFFFF;
+        }
 
-          .tagline {
-              font-size: 1.3em;
-              color: #FFFFFF;
-              opacity: 0.9;
-              font-weight: 300;
-          }
+        /* Resized Logo */
+        .logo-img {
+            max-width: 80px; 
+            height: auto;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
 
-          .content-card {
-              background: #FFFFFF;
-              border-radius: 12px;
-              padding: 50px;
-              margin: 30px 0;
-              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-          }
+        h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 8px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
 
-          h2 {
-              color: #1A3651;
-              font-size: 2em;
-              margin-bottom: 20px;
-              font-weight: 600;
-          }
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-          h3 {
-              color: #1A3651;
-              font-size: 1.5em;
-              margin-top: 30px;
-              margin-bottom: 10px;
-              font-weight: 600;
-          }
+        /* Refined Card Spacing */
+        .content-section {
+            background: var(--glass-bg);
+            border-radius: 20px;
+            padding: clamp(24px, 4vw, 48px);
+            margin: 20px 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
 
-          p {
-              color: #708090;
-          }
+        h2 {
+            color: var(--primary-navy);
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
 
-          .products {
-              display: grid;
-              grid-template-columns: 1fr;
-              gap: 25px;
-              margin-top: 30px;
-          }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
 
-          .product-card {
-              border: 2px solid #007BFF;
-              border-radius: 8px;
-              padding: 30px;
-              transition: transform 0.2s, box-shadow 0.2s;
-              background: #FFFFFF;
-          }
+        .product-card {
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 28px;
+            background: #FFFFFF;
+            transition: all 0.3s ease;
+        }
 
-          .product-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
-          }
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.1);
+            border-color: var(--accent-blue);
+        }
 
-          .product-card.coming-soon {
-              border-color: #708090;
-              opacity: 0.7;
-          }
+        .product-title {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
 
-          .product-title {
-              color: #1A3651;
-              font-size: 1.8em;
-              margin-bottom: 10px;
-              font-weight: 600;
-          }
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
 
-          .product-description {
-              color: #708090;
-              margin-bottom: 15px;
-          }
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
 
-          .badge {
-              display: inline-block;
-              background: #007BFF;
-              color: #FFFFFF;
-              padding: 5px 12px;
-              border-radius: 20px;
-              font-size: 0.85em;
-              margin-right: 8px;
-              font-weight: 500;
-          }
+        .badge {
+            background: #f0f7ff;
+            color: var(--accent-blue);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
 
-          .badge.secondary {
-              background: #708090;
-          }
+        .coming-soon {
+            background: #fcfcfc;
+            border-style: dashed;
+            opacity: 0.8;
+        }
 
-          footer {
-              text-align: center;
-              padding: 40px 20px;
-              color: #FFFFFF;
-          }
+        /* Modernized About Section */
+        .about-section {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            color: #FFFFFF;
+            border-radius: 20px;
+            padding: clamp(24px, 4vw, 48px);
+            margin: 20px 0;
+        }
 
-          footer a {
-              color: #FFFFFF;
-              text-decoration: none;
-              border-bottom: 1px solid #FFFFFF;
-              padding-bottom: 2px;
-              transition: opacity 0.2s;
-          }
+        .about-section h2 { color: #FFFFFF; margin-bottom: 16px; }
+        
+        .about-section h3 {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
 
-          footer a:hover {
-              opacity: 0.7;
-          }
+        .about-section p {
+            opacity: 0.85;
+            font-size: 1rem;
+            max-width: 850px;
+        }
 
-          .links {
-              margin-top: 15px;
-          }
+        footer {
+            text-align: center;
+            padding: 40px 20px 60px;
+            color: #FFFFFF;
+            font-size: 0.85rem;
+        }
 
-          .links a {
-              margin: 0 15px;
-          }
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            opacity: 0.5;
+            margin: 0 10px;
+            transition: opacity 0.2s;
+        }
 
-          /* Accent section with navy background */
-          .accent-card {
-              background: #1A3651;
-              color: #FFFFFF;
-              border-radius: 12px;
-              padding: 50px;
-              margin: 30px 0;
-              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-          }
+        footer a:hover { opacity: 1; }
 
-          .accent-card h2 {
-              color: #FFFFFF;
-          }
+        @media (max-width: 600px) {
+            header { padding-top: 40px; }
+            .content-section { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://media.licdn.com/dms/image/v2/D560BAQGVJDDzfZOUDg/company-logo_200_200/B56ZtNZtYLIAAI-/0/1766530144440/ddm_media_group_logo?e=1772064000&v=beta&t=8-UsAoVpC-SmBmCYvz2F3hOdfc7L1Sx3Ve8oIsv1P8Y" 
+                 alt="DDM Media Group Logo" 
+                 class="logo-img">
+            <h1>DDM Media Group</h1>
+            <p class="tagline">Building innovative digital products and experiences</p>
+        </header>
 
-          .accent-card p {
-              color: #FFFFFF;
-              opacity: 0.9;
-          }
+        <section class="content-section">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-title">Tactus</div>
+                    <p class="product-description">
+                        A powerful habit tracking app designed to help users build better routines with smart reminders and analytics.
+                    </p>
+                    <div class="badge-group">
+                        <span class="badge">iOS</span>
+                        <span class="badge">Live Activities</span>
+                        <span class="badge">Analytics</span>
+                    </div>
+                </div>
 
-          .accent-card h3 {
-              color: #007BFF;
-              margin-top: 30px;
-          }
+                <div class="product-card coming-soon">
+                    <div class="product-title">Pipeline</div>
+                    <p class="product-description">
+                        We're constantly innovating. New digital solutions are currently in active development.
+                    </p>
+                    <div class="badge-group">
+                        <span class="badge" style="background: #edf2f7; color: #718096;">In Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          @media (max-width: 768px) {
-              h1 {
-                  font-size: 2.5em;
-              }
+        <section class="about-section">
+            <h2>About The Group</h2>
+            <p>
+                DDM Media Group is a media venture company focused on creating digital products that solve real problems 
+                and improve daily lives. We combine thoughtful design with powerful technology.
+            </p>
 
-              .tagline {
-                  font-size: 1.1em;
-              }
+            <h3>Our Approach</h3>
+            <p>
+                We believe in building products with intention—every feature serves a purpose, 
+                and every design decision enhances the user experience.
+            </p>
 
-              .content-card,
-              .accent-card {
-                  padding: 30px 25px;
-              }
+            <h3>The Vision</h3>
+            <p>
+                To build a portfolio of innovative digital products that empower individuals to be more productive and successful.
+            </p>
+        </section>
 
-              h2 {
-                  font-size: 1.6em;
-              }
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <header>
-              <h1>DDM Media Group</h1>
-              <p class="tagline">Building innovative digital products and experiences</p>
-          </header>
-
-          <div class="content-card">
-              <h2>Our Products</h2>
-              <div class="products">
-                  <div class="product-card">
-                      <div class="product-title">Tactus</div>
-                      <p class="product-description">
-                          A powerful habit tracking app designed to help users build better routines and achieve their goals.
-                          With intuitive tracking, smart reminders, and insightful analytics, Tactus makes building lasting habits effortless.
-                      </p>
-                      <span class="badge">iOS</span>
-                      <span class="badge">Live Activities</span>
-                      <span class="badge">Notifications</span>
-                  </div>
-
-                  <div class="product-card coming-soon">
-                      <div class="product-title">More Coming Soon</div>
-                      <p class="product-description">
-                          We're constantly innovating and building new products. Stay tuned for upcoming releases.
-                      </p>
-                      <span class="badge secondary">In Development</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="accent-card">
-              <h2>About DDM Media Group</h2>
-              <p>
-                  DDM Media Group is a media venture company focused on creating digital products that solve real problems
-                  and improve people's daily lives. We combine thoughtful design with powerful technology to build
-                  applications that users love.
-              </p>
-
-              <h3>Our Approach</h3>
-              <p>
-                  We believe in building products with intention—every feature serves a purpose, and every design decision
-                  enhances the user experience. Our focus is on quality over quantity, creating fewer but better products
-                  that truly make a difference.
-              </p>
-
-              <h3>Vision</h3>
-              <p>
-                  To build a portfolio of innovative digital products that empower individuals to be more productive,
-                  mindful, and successful in their personal and professional lives.
-              </p>
-          </div>
-
-          <footer>
-              <p>&copy; 2026 DDM Media Group. All rights reserved.</p>
-              <div class="links">
-                  <a href="/tactus/privacy.html">Privacy Policy</a>
-              </div>
-          </footer>
-      </div>
-  </body>
-  </html>
+        <footer>
+            <p>&copy; 2026 DDM Media Group</p>
+            <div style="margin-top: 12px;">
+                <a href="/tactus/privacy.html">Privacy Policy</a>
+                <a href="mailto:hello@ddmmediagroup.com">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
