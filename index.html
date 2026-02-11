@@ -135,27 +135,43 @@
         }
 
         /* --- METRICS --- */
+        /* --- UPDATED METRICS BAR --- */
         .metrics-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 48px;
+            display: grid;
+            /* This creates 2 equal columns on mobile */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 32px;
             margin-bottom: 80px;
             padding: 32px 0;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
-
+        
         .metric h3 {
             font-size: 2rem;
             font-weight: 700;
             color: var(--text-main);
+            line-height: 1;
+            margin-bottom: 4px;
         }
-
+        
         .metric span {
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.75rem; /* Slightly smaller for better mobile fit */
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            display: block;
+        }
+        
+        /* Desktop Fix: Change from 2 columns to 4 columns */
+        @media (min-width: 768px) {
+            .metrics-bar {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 48px;
+            }
+            .metric span {
+                font-size: 0.875rem;
+            }
         }
 
         /* --- BENTO GRID --- */
@@ -463,7 +479,7 @@
                 <a href="https://www.linkedin.com/company/ddm-media-group/">LinkedIn</a>
                 <a href="/tactus/privacy.html">Tactus Privacy Policy</a>
             </div>
-            <p>&copy; 2026 DDM Media Group. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> DDM Media Group. All rights reserved.</p>
         </footer>
     </div>
 
@@ -504,6 +520,8 @@
             });
             // The mailto: link will still attempt to open in the background
         });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
