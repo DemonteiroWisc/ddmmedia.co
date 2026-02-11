@@ -442,7 +442,7 @@
                     </div>
                 </div>
                 <div>
-                     <a href="#" class="btn" style="background: white; color: #0f172a; cursor: default;">Internal Beta</a>
+                     <a href="mailto:daniel@ddmmedia.co?subject=Tactus%20Beta%20Inquiry" class="btn" style="background: white; color: #0f172a;">Request Access</a>
                 </div>
             </div>
         </div>
@@ -486,6 +486,23 @@
 
         document.querySelectorAll('.reveal').forEach(el => {
             observer.observe(el);
+        });
+
+        // --- ADD THIS PART BELOW ---
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            const email = "daniel@ddmmedia.co";
+            
+            // This copies the email to the user's clipboard
+            navigator.clipboard.writeText(email).then(() => {
+                const status = document.getElementById('copy-status');
+                status.style.display = 'inline';
+                
+                // Hides the "Email Copied!" message after 2 seconds
+                setTimeout(() => {
+                    status.style.display = 'none';
+                }, 2000);
+            });
+            // The mailto: link will still attempt to open in the background
         });
     </script>
 </body>
