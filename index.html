@@ -431,7 +431,7 @@
                 <span>Remote Operations</span>
             </div>
             <div class="metric">
-                <h3>Major</h3>
+                <h3>Strategic</h3>
                 <span>Label Partnerships</span>
             </div>
         </section>
@@ -488,7 +488,7 @@
                     </div>
                 </div>
                 <div>
-                     <a href="mailto:daniel@ddmmedia.co?subject=Tactus%20Beta%20Inquiry" class="btn" style="background: white; color: #0f172a;">Request Access</a>
+                     <a href="mailto:daniel@ddmmedia.co?subject=Tactus%20Beta%20Inquiry" id="tactus-btn" class="btn" style="background: white; color: #0f172a;">Request Access</a>
                 </div>
             </div>
         </div>
@@ -552,6 +552,19 @@
         });
 
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Tactus Button / Copy to Clipboard
+        document.getElementById('tactus-btn').addEventListener('click', function(e) {
+            const email = "daniel@ddmmedia.co";
+            navigator.clipboard.writeText(email).then(() => {
+                const btn = document.getElementById('tactus-btn');
+                const originalText = btn.innerText;
+                btn.innerText = "Email Copied!";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        });
     </script>
 </body>
 </html>
