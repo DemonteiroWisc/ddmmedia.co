@@ -310,42 +310,50 @@
             opacity: 0.9;
         }
 
-        /* --- PARTNERS --- */
+        /* --- BOXED PARTNERS SECTION --- */
         .partners {
             margin-bottom: 80px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
         }
         
         .partners h4 {
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
+            letter-spacing: 0.15em;
+            margin-bottom: 32px;
         }
-
-        /* --- UPDATED PARTNERS LIST --- */
+        
         .partner-list {
             display: grid;
-            /* Forces 2 equal columns on mobile */
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 24px 40px;
-            opacity: 0.7;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+            gap: 32px 40px;
         }
         
         .partner-name {
-            font-size: 1rem; /* Slightly smaller for mobile safety */
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: var(--text-main);
-            white-space: nowrap; /* Prevents names from breaking into two lines */
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
         
-        /* Desktop Fix: Change from 2 columns to 4 columns */
+        .partner-role {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        
+        /* Desktop Fix: 4 columns */
         @media (min-width: 768px) {
             .partner-list {
                 grid-template-columns: repeat(4, 1fr);
-            }
-            .partner-name {
-                font-size: 1.1rem;
             }
         }
 
@@ -493,13 +501,25 @@
             </div>
         </div>
 
-        <section class="partners reveal">
-            <h4>Strategic Partnerships & Clients</h4>
+        <section class="partners reveal" id="partners">
+            <h4>Strategic Partnerships & Campaign History</h4>
             <div class="partner-list">
-                <span class="partner-name">Sony Music</span>
-                <span class="partner-name">Atlantic Records</span>
-                <span class="partner-name">Capitol Records</span>
-                <span class="partner-name">MagicJohn</span>
+                <div class="partner-name">
+                    Sony Music
+                    <span class="partner-role">Music Promotion</span>
+                </div>
+                <div class="partner-name">
+                    Atlantic Records
+                    <span class="partner-role">Music Promotion</span>
+                </div>
+                <div class="partner-name">
+                    Capitol Records
+                    <span class="partner-role">Music Promotion</span>
+                </div>
+                <div class="partner-name">
+                    MagicJohn
+                    <span class="partner-role">Performance Creative</span>
+                </div>
             </div>
         </section>
 
