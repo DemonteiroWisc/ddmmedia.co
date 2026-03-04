@@ -316,7 +316,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 40px;
+            padding: 24px;
         }
         
         .partners h4 {
@@ -329,17 +329,18 @@
         
         .partner-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-            gap: 32px 40px;
+            /* Default: Single column for very narrow phones */
+            grid-template-columns: 1fr;
+            gap: 24px;
         }
         
         .partner-name {
-            font-size: 1.1rem;
+            font-size: 1.05rem; /* Slightly smaller to help one-line fit */
             font-weight: 700;
             color: var(--text-main);
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 2px;
         }
         
         .partner-role {
@@ -350,10 +351,26 @@
             letter-spacing: normal;
         }
         
-        /* Desktop Fix: 4 columns */
+        /* Option 2: Standard Mobile (2x2 Grid) */
+        /* This triggers when the screen is wide enough to handle 2 columns without wrapping */
+        @media (min-width: 400px) {
+            .partner-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px 20px;
+            }
+        }
+        
+        /* Option 3: Desktop (4 Columns) */
         @media (min-width: 768px) {
+            .partners {
+                padding: 40px;
+            }
             .partner-list {
                 grid-template-columns: repeat(4, 1fr);
+                gap: 32px 40px;
+            }
+            .partner-name {
+                font-size: 1.1rem;
             }
         }
 
