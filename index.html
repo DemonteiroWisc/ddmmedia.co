@@ -606,6 +606,24 @@
 
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // GA4 click tracking
+        document.addEventListener('click', function(e) {
+            if (typeof gtag !== 'function') return;
+            const el = e.target.closest('a, button');
+            if (!el) return;
+
+            if (el.id === 'contact-link') {
+                gtag('event', 'contact_click', { link_url: el.href });
+            } else if (el.id === 'tactus-btn') {
+                gtag('event', 'tactus_request_access', { link_url: el.href });
+            } else if (el.tagName === 'A') {
+                gtag('event', 'click_link', {
+                    link_text: el.textContent.trim().slice(0, 100),
+                    link_url: el.href
+                });
+            }
+        });
+
         // Tactus Button / Copy to Clipboard
         document.getElementById('tactus-btn').addEventListener('click', function(e) {
             const email = "daniel@ddmmedia.co";
